@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bike Game - Tushar</title>
+  </head>
+  <body>
+    <div id="loading" class="loading">
+      <h1>Bike Game</h1>
+      <p id="loading-status">Loading assets 0%</p>
+    </div>
+
+    <canvas id="game" aria-label="Bike Game"></canvas>
+
+    <div class="hud">
+      <div class="topbar">
+        <span id="fps">FPS 0</span>
+        <span id="time">Time 00:00</span>
+        <span id="money">Money Rs 0</span>
+      </div>
+
+      <button id="camera-mode" class="camera-mode" type="button">Follow</button>
+      <button id="pause" class="icon-button" type="button" aria-label="Pause">II</button>
+
+      <div class="speedometer" aria-label="Speed">
+        <span id="speed">0</span>
+        <small>km/h</small>
+      </div>
+
+      <canvas id="minimap" class="minimap" width="150" height="150" aria-label="Minimap"></canvas>
+
+      <div class="mobile-controls" aria-hidden="true">
+        <div class="joystick"><span></span></div>
+        <div class="mobile-actions">
+          <button type="button">Brake</button>
+          <button type="button">Boost</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="start-screen" class="start-screen hidden">
+      <section class="start-panel" aria-labelledby="start-title">
+        <h1 id="start-title">Bike Game</h1>
+        <p id="start-subtitle">Ride through the city, dodge traffic, and keep your run smooth.</p>
+        <button id="start-button" class="start-button" type="button">Start Ride</button>
+        <div id="start-controls" class="start-info">
+          <span><strong>Move:</strong> Arrow keys or WASD</span>
+          <span><strong>Camera:</strong> Switch with the camera button</span>
+          <span><strong>Pause:</strong> Use the pause button</span>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
